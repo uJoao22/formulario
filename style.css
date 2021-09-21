@@ -1,0 +1,82 @@
+/* RESET */
+*{
+	box-sizing:border-box;
+	font-size:14px;
+	font-family:arial, verdana, helvetica;
+}
+
+body{
+	margin:0;
+	padding:0;
+}
+
+/* CABEÇALHO */
+header{
+	width:100%;
+	background-color:rgba(231, 231, 231, 0.9);
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+header figure img{
+	height:100px;
+}
+
+header nav{
+	width: 95%;
+	margin-right: 10px;
+}
+
+header nav ul{
+	display:flex;
+	align-items: center;
+	justify-content:flex-end;
+	list-style:none;
+	padding: 0;
+}
+
+header nav ul li a{
+	font-family:arial,verdana,helvetica;
+	font-size:14px;
+	color:#FFFFFF;
+	text-decoration:none;
+	background-color:#A52A2A;
+	margin-right:10px;
+	padding:5px 20px;
+}
+
+header nav ul li a:hover{
+	background-color:#1E90FF;
+}
+
+header nav ul li a.selecionado{
+	background-color:#1E90FF;
+	font-size:16px;
+	margin-right:0px;
+}
+
+/* CONTATO */
+.contato{
+	width:100%;
+	padding:30px;
+}
+
+h1{
+	font-family:arial,verdana,helvetica;
+	font-size:30px;
+	color:#1E90FF;
+	text-align:center;
+}
+
+@media (max-width: 850px) {
+	header{
+		flex-direction:column;
+	}
+	header nav{
+		margin: 20px 0;
+	}
+	header nav ul{
+		justify-content: center;
+	}
+}

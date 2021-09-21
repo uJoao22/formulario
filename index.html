@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+	<head>
+		<title>Formularios - Conceitos Basicos</title>	
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="form.css">
+	</head>
+	
+	<body>
+	
+		<header> <!-- INICIO CABEÇALHO -->
+
+			<figure>
+				<img src="marca_02.png">
+			</figure>
+		
+			<nav>
+				<ul>
+					<li><a href="#"> Home </a></li>
+					<li><a href="#"> Clientes </a></li>
+					<li><a href="#"> Produtos </a></li>
+					<li><a class="selecionado"> Contato </a></li>
+				</ul>
+			</nav>
+			
+		</header> <!-- FIM CABEÇALHO -->
+		
+		<h1> FALE CONOSCO! </h1>
+		
+		<section class="contato"> <!-- INICIO CONTATO -->
+			
+			<form method="post">
+			
+			<fieldset id="pessoais">
+				<legend> DADOS PESSOAIS </legend>
+					<p>Nome: <input type="text" name="nNome" id="iNome" size="40" maxiength="40" placeholder="Nome Completo"/></p>
+					<p>E-mail: <input type="email" name="nEmail" id="iEmail" size="40" maxiength="90" placeholder="Email de contato"/></p>
+					<p>Senha: <input type="password" name="nSenha" id="iSenha" size="40" maxiength="11" placeholder="Até 11 caracteres"/></p>
+			
+				<fieldset id="civil">
+					<legend> Estado Civil: </legend>
+						<input type="radio" name="nCivil" id="iCasado"/><label for="iCasado"> Casado </label> </br>
+						<input type="radio" name="nCivil" id="iSolteiro"/><label for="iSolteiro"> Solteiro </label> </br>
+						<input type="radio" name="nCivil" id="iOutro"/><label for="iOutro"> Outro </label>
+				</fieldset>
+				
+				<p> Nascimento: <input type="date" name="nNasc" id="iNasc"/></p>
+				
+			</fieldset>
+			
+			<fieldset id="endereco">
+				<legend> ENDEREÇO </legend>
+					<p> Logradouro: <input type="text" name="nRua" id="iRua" size="20" maxlength="60" placeholder="Rua, Av, (...)"/></p>
+					<p> Número: <input type="number" name="nNum" id="iNum" min="0" max="9999"/></p>
+					<p> Complemento: <input type="number" name="nCompl" id="iCompl" min="0" max="9999"/></p>
+					
+					<p> Cidade: <input type="text" name="nCidade" id="iCidade" size="20" maxlength="60" Placeholder="Sua Cidade" list="cidades"/>
+					<datalist id="cidades">
+						<option value="Muriaé"></option>
+						<option value="Belo Horizonte"></option>
+						<option value="Bambuí"></option>
+						<option value="Mateus Leme"></option></p>
+					</datalist>
+					
+					<p> Estado: <select name="nEstado" id="iEstado">
+						<option> - - Selecione - - </option>
+						<optgroup label="Região Sudeste">
+							<option> Minas Gerais </option>
+							<option> Rio de Janeiro </option>
+							<option> São Paulo </option>
+						</optgroup>
+						<optgroup label="Região Sul">
+							<option> Paraná </option>
+							<option> Santa Catarina </option>
+							<option> Rio Grande do Sul </option>
+						</optgroup>
+					</select></p>
+			</fieldset>
+						
+			<fieldset id="urgencia">
+				<legend> URGÊNCIA DO CONTATO </legend>
+					<p> Grau de urgência: Min <input type="range" name="nGrau" id="iGrau" min="0" max="10" step="2"/> Máx</p>
+					<p> Mensagem: <textarea name="nMens" id="iMens" cols="45" rows="5" placeholder="Deixe sua Mensagem"></textarea></p>
+					
+					<p> <input type="checkbox" name="nReceber" id="iReceber" checked/> Gostaria de receber informações da nossa empressa (NewsLetter) </p>
+					
+					<p> Cor de preferência: <input type="color" name="nColor" id="iColor" value="#000000"/></p>
+			</fieldset>
+			
+			
+			<input name="nEnviar" id="iEnviar" type="submit">			
+			
+		</form>
+		
+		</section> <!-- FIM CONTATO -->
+
+	</body>
+
+</html>
